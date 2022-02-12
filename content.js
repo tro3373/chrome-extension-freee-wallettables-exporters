@@ -22,7 +22,7 @@
   //   d.body.removeChild(p);
   //   return r;
   // };
-  const dl = (w, d, name = 'download.csv', list) => {
+  const dl = (w, d, name = 'walletables.csv', list) => {
     const data = list.map((cols) => cols.join(',')).join('\n');
     const bom = new Uint8Array([0xef, 0xbb, 0xbf]);
     /* eslint no-undef: 0 */
