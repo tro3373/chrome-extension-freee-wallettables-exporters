@@ -2,17 +2,16 @@
   "name": "Freee wallettables expoter",
   "description": "",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "permissions": [
     "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
     "https://secure.freee.co.jp/wallet/walletables/"
   ],
+  "action": {},
   "background": {
-    "scripts": [
-      "jquery-3.6.0.min.js",
-      "background.js"
-    ],
-    "persistent": false
-  },
-  "browser_action": {}
+    "service_worker": "background.js"
+  }
 }
