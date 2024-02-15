@@ -95,6 +95,12 @@
     await clickElementForChangePage('li:last-child a i');
   };
 
+  const getCsvName = () => {
+    const bankName = $('div#walletables_page section.walletable-columns div div div:nth-child(1) span.walletable-name').text();
+    const ymd = $('div#vb-dateInput_5 input').val();
+    return `freee-${ymd}-${bankName}.csv`;
+  };
+
   const main = async () => {
     const max = findMaxOffset();
     // activateFirstPageIfNeeded();
@@ -118,7 +124,8 @@
     }
     console.debug('Done', all);
     // clip(d, JSON.stringify(all, null, 2));
-    dl(window, document, undefined, all);
+    const csvName = getCsvName();
+    dl(window, document, csvName, all);
   };
   main();
 })();
