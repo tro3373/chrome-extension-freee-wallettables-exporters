@@ -75,7 +75,7 @@
       // c--;
       // if (c <= 0) break;
     }
-    await sleep(1000);
+    await sleep(1500);
   };
 
   const clickElementForChangePage = async (opt) => {
